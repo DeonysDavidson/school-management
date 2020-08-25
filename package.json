@@ -1,0 +1,22 @@
+{
+  "name": "teacher-db-assign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "express-handlebars": "4.0.4",
+    "handlebars": "4.7.6",
+    "pg": "8.2.1",
+    "pg-hstore": "2.3.3",
+    "sequelize": "5.21.13"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}

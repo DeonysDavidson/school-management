@@ -1,0 +1,27 @@
+<div class="container">
+  <form id='student-form' action="{{action}}" method="{{method}}">
+    <label for="fname">First Name:</label>
+    <input id="fname" type="text" name="firstName"
+      value="{{#if stud }}{{student.firstName}}{{else}}{{teacher.firstName}}{{/if}}" placeholder="Enter first name"
+      required />
+    <br />
+    <label for="lname">Last Name:</label>
+    <input id="lname" type="text" name="lastName"
+      value="{{#if stud }}{{student.lastName}}{{else}}{{teacher.lastName}}{{/if}}" placeholder="Enter last name"
+      required />
+    <br />
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" value="{{#if stud }}{{student.age}}{{else}}{{teacher.age}}{{/if}}"
+      placeholder="Enter your age" required />
+    <br />
+    <label>Gender: </label>
+    <input id="male" type="radio" value="male" name="gender" {{#if (ifEquality gender "male") }}checked{{/if}}
+      required />
+    <label for="male">Male</label>
+    <input id="female" type="radio" value='female' name="gender" {{#if (ifEquality gender "female") }}checked{{/if}}
+      required />
+    <label for="female">Female</label>
+    <br />
+    <input type="submit" value="{{btn}} Student" class="btn btn-primary" />
+  </form>
+</div>

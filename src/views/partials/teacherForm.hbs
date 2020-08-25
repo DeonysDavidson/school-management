@@ -1,0 +1,34 @@
+<div class="container">
+  <form id='student-form' action="{{action}}" method="{{method}}">
+    <label for="fname">First Name:</label>
+    <input id="fname" type="text" name="firstName"
+      value="{{#if stud }}{{student.firstName}}{{else}}{{teacher.firstName}}{{/if}}" placeholder="Enter first name"
+      required />
+    <br />
+    <label for="lname">Last Name:</label>
+    <input id="lname" type="text" name="lastName"
+      value="{{#if stud }}{{student.lastName}}{{else}}{{teacher.lastName}}{{/if}}" placeholder="Enter last name"
+      required />
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{#if stud }}{{student.age}}{{else}}{{teacher.email}}{{/if}}"
+      placeholder="Enter your email" required />
+    <br />
+    <label for="class">Class:</label>
+    <input type="text" id="class" name="class" value="{{#if stud }}{{student.age}}{{else}}{{teacher.class}}{{/if}}"
+      placeholder="Enter your Class" required />
+    <br />
+    <label>Subject: </label>
+    <input id="maths" type="radio" value="maths" name="subject" {{#if (ifEquality gender "maths") }}checked{{/if}}
+      required />
+    <label for="maths">Maths</label>
+    <input id="physics" type="radio" value="physics" name="subject" {{#if (ifEquality gender "physics") }}checked{{/if}}
+      required />
+    <label for="physics">Physics</label>
+    <input id="english" type="radio" value="english" name="subject" {{#if (ifEquality gender "english") }}checked{{/if}}
+      required />
+    <label for="english">English</label>
+    <br />
+    <input type="submit" value="{{btn}} Student" class="btn btn-primary" />
+  </form>
+</div>
